@@ -2,64 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ResumeCraft - Resume Builder</title>
+    <title>ResumeCraft - AI Resume Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav>
+    <nav class="navbar">
         <div class="logo">ResumeCraft</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#" class="btn-nav">Get Started</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
+    <section class="hero" id="hero">
+        <div class="hero-content">
             <h1>Create Professional Resumes in Minutes</h1>
-            <p>Build, customize, and download job-ready resumes with our smart and simple resume builder.</p>
-            <a href="#" class="btn-primary">Build Your Resume</a>
-        </div>
-        <div class="hero-image">
-            <div class="mockup"></div>
+            <p>Build, customize and download job-ready resumes using our powerful AI resume builder.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Build Resume</a>
+                <a href="#" class="btn-outline">View Templates</a>
+            </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Features -->
+    <section class="features" id="features">
         <h2>Why Choose ResumeCraft?</h2>
-        <div class="feature-cards">
-            <div class="card">
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">📄</div>
                 <h3>Modern Templates</h3>
-                <p>Choose from clean and professional resume designs.</p>
+                <p>ATS-friendly and professional resume designs.</p>
             </div>
-            <div class="card">
-                <h3>Easy Editing</h3>
-                <p>Simple interface to edit and update your resume anytime.</p>
+
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>AI Assistance</h3>
+                <p>Smart suggestions to improve your resume instantly.</p>
             </div>
-            <div class="card">
+
+            <div class="feature-card">
+                <div class="icon">⬇️</div>
                 <h3>Instant Download</h3>
-                <p>Download high-quality PDF resumes instantly.</p>
+                <p>Download high-quality PDFs in one click.</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>Trusted by Students & Professionals</h2>
+        <div class="testimonial-box">
+            <p>"ResumeCraft helped me land 3 interviews in one week!"</p>
+            <span>- Utkarsh Kumar</span>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <h2>Simple Pricing</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Free</h3>
+                <h4>₹0</h4>
+                <ul>
+                    <li>1 Resume</li>
+                    <li>Basic Templates</li>
+                    <li>PDF Download</li>
+                </ul>
+                <a href="#" class="btn-outline">Start Free</a>
+            </div>
+
+            <div class="price-card highlight">
+                <h3>Pro</h3>
+                <h4>₹299</h4>
+                <ul>
+                    <li>Unlimited Resumes</li>
+                    <li>Premium Templates</li>
+                    <li>AI Suggestions</li>
+                </ul>
+                <a href="#" class="btn-primary">Go Pro</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
     <section class="cta">
-        <h2>Ready to land your dream job?</h2>
+        <h2>Ready to Build Your Resume?</h2>
         <a href="#" class="btn-primary">Get Started Now</a>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2026 ResumeCraft. All rights reserved.</p>
+        <p>Privacy Policy • Terms of Service</p>
     </footer>
 
 </body>
 </html>
-
