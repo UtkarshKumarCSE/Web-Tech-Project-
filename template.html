@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Templates</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="template-container">
+    <h2>Select Template</h2>
+
+    <div class="template-buttons">
+        <button onclick="render('t1')">Classic</button>
+        <button onclick="render('t2')">Modern</button>
+    </div>
+
+    <div id="resume" class="resume"></div>
+
+    <button onclick="window.print()" class="btn">Download PDF</button>
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("resumeData"));
+
+function render(type){
+    let html = "";
+
+    if(type === "t1"){
+        html = `
+        <div class="template1">
+            <h1>${data.name}</h1>
+            <p>${data.email} | ${data.phone}</p>
+            <h3>Objective</h3>
+            <p>${data.summary}</p>
+            <h3>Education</h3>
+            <p>${data.education}</p>
+            <h3>Skills</h3>
+            <p>${data.skills}</p>
+            <h3>Experience</h3>
+            <p>${data.experience}</p>
+        </div>`;
+    }
+
+    if(type === "t2"){
+        html = `
+        <div class="template2">
+            <h1>${data.name}</h1>
+            <p>${data.email} | ${data.phone}</p>
+            <h3>Profile</h3>
+            <p>${data.summary}</p>
+            <h3>Education</h3>
+            <p>${data.education}</p>
+            <h3>Skills</h3>
+            <p>${data.skills}</p>
+            <h3>Work</h3>
+            <p>${data.experience}</p>
+        </div>`;
+    }
+
+    document.getElementById("resume").innerHTML = html;
+}
+</script>
+
+</body>
+</html>
