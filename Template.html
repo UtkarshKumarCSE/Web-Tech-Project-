@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Enter Your Details</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+
+    <textarea id="summary" placeholder="Career Objective"></textarea>
+    <textarea id="education" placeholder="Education"></textarea>
+    <textarea id="skills" placeholder="Skills"></textarea>
+    <textarea id="experience" placeholder="Experience"></textarea>
+
+    <button onclick="saveData()">Next → Choose Template</button>
+</div>
+
+<script>
+function saveData(){
+    const data = {
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        summary: summary.value,
+        education: education.value,
+        skills: skills.value,
+        experience: experience.value
+    };
+
+    localStorage.setItem("resumeData", JSON.stringify(data));
+    window.location.href = "template.html";
+}
+</script>
+
+</body>
+</html>
